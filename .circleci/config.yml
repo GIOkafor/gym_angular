@@ -1,5 +1,6 @@
 version: 2.1
 orbs:
+  codecov: codecov/codecov@3
   browser-tools: circleci/browser-tools@1.2.3
 jobs:
   build:
@@ -23,3 +24,4 @@ jobs:
           paths:
             - "node_modules"
       - run: npm run test
+      - codecov/upload
