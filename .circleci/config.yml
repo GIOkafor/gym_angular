@@ -4,7 +4,7 @@ orbs:
   browser-tools: circleci/browser-tools@1.2.3
 jobs:
   build:
-    working_directory: ~/ng-project
+    working_directory: ~/gym
     docker:
       - image: cimg/node:16.13.1-browsers
     steps:
@@ -24,4 +24,5 @@ jobs:
           paths:
             - "node_modules"
       - run: npm run test
-      - codecov/upload
+      - codecov/upload:
+        file: './coverage/index.html'
