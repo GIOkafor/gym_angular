@@ -24,4 +24,4 @@ jobs:
           paths:
             - "node_modules"
       - run: npm run test
-      - codecov/upload
+      - run: codecov/upload
