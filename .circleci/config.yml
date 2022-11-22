@@ -24,5 +24,4 @@ jobs:
           paths:
             - "node_modules"
       - run: npm run test
-      - codecov/upload:
-        file: './coverage/index.html'
+      - codecov/upload
